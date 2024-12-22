@@ -4,8 +4,10 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { TOP_LISTS } from '../../../constants';
-import { useGetFilmsTopQuery } from '../../../services/kinopoiskApi';
+import { useGetFilmsTopQuery } from '../../../services/kinopoiskAPI';
+import ErrorMessage from '../../ui/ErrorMessage';
 import MoviesList from '../../ui/MoviesList';
+import MoviesListTopSkeleton from './MoviesListTopSkeleton.jsx';
 
 export default function MoviesListTop() {
   const location = useLocation();
@@ -23,9 +25,9 @@ export default function MoviesListTop() {
     setPage(1);
   }, [location]);
 
-  if (error) return <p>Some error</p>;
+  if (error) return <ErrorMessage />;
 
-  if (isLoading) return <p>Loading</p>;
+  if (isLoading) return <MoviesListTopSkeleton />;
 
   return (
     <>
