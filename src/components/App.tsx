@@ -1,8 +1,8 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { MOVIE_LISTS, TOP_LISTS } from '../constants.ts';
-import Layout from './Layout.tsx';
+import { MOVIE_LISTS, TOP_LISTS } from '../constants';
+import Layout from './Layout';
 import ActorDetail from './pages/ActorDetail';
 import MovieDetail from './pages/MovieDetail';
 import Movies from './pages/Movies';
@@ -39,7 +39,7 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router}></RouterProvider>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
