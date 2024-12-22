@@ -1,4 +1,3 @@
-// Define a service using a base URL and expected endpoints
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const kinopoiskApiKey = import.meta.env.VITE_KINOPOISK_KEY;
@@ -49,6 +48,24 @@ export const kinopoiskApi = createApi({
         ),
       }),
     }),
+
+    getFilm: builder.query({
+      query: id => `/v2.2/films/${id}`,
+    }),
+
+    getSequelsAndPrequels: builder.query({
+      query: id => `/v2.1/films/${id}/sequels_and_prequels`,
+      transformResponse: response =>
+        response.map(el => ({ ...el, kinopoiskId: el.filmId })),
+    }),
+
+    getStaff: builder.query({
+      query: id => `/v1/staff?filmId=${id}`,
+    }),
+
+    getStaffById: builder.query({
+      query: id => `/v1/staff/${id}`,
+    }),
   }),
 });
 
@@ -56,4 +73,8 @@ export const {
   useGetFilmsTopQuery,
   useGetFilmsQuery,
   useGetGenresAndCountriesQuery,
+  useGetFilmQuery,
+  useGetSequelsAndPrequelsQuery,
+  useGetStaffQuery,
+  useGetStaffByIdQuery,
 } = kinopoiskApi;
