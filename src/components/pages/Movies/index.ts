@@ -1,3 +1,3 @@
-import Movies from './Movies.tsx';
+import Movies from './Movies.jsx';
 
 export default Movies;
