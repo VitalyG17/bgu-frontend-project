@@ -4,7 +4,7 @@ import { TOP_LISTS } from '../constants';
 import {
   useGetFilmsQuery,
   useGetFilmsTopQuery,
-} from '../services/kinopoiskAPI';
+} from '../services/kinopoiskApi';
 
 export default function useMoviesQuery() {
   const { countries, order, year, page } = useSelector(

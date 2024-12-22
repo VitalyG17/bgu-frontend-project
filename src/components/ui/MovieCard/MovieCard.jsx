@@ -2,7 +2,7 @@ import { Box, Link, Rating, Stack, Tooltip } from '@mui/material';
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import styles from './MovieCard.module.scss';
+import styles from './MovieCard.module.css';
 
 export default function MovieCard({ movie, reload = false }) {
   const linkProps = reload
@@ -27,7 +27,7 @@ export default function MovieCard({ movie, reload = false }) {
             <Box>
               <Rating
                 name="read-only"
-                value={movie.ratingKinopoisk / 1.5}
+                value={movie.ratingKinopoisk / 2}
                 readOnly
                 precision={0.1}
               />
