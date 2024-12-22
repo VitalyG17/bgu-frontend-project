@@ -1,3 +1,3 @@
-import MoviesListTop from './MoviesListTop.tsx';
+import MoviesListTop from './MoviesListTop.jsx';
 
 export default MoviesListTop;
