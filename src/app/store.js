@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import currentQueryReducer from '../features/currentQuerySlice';
 import searchQueryReducer from '../features/searchQuerySlice';
-import { kinopoiskApi } from '../services/kinopoiskApi';
+import { kinopoiskApi } from '../services/kinopoiskAPI';
 
 export const store = configureStore({
   reducer: {

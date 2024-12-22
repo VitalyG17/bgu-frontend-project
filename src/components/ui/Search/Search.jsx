@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { setSearchQuery } from '../../../features/searchQuerySlice';
-import { useGetFilmsQuery } from '../../services/kinopoiskApi';
+import { useGetFilmsQuery } from '../../../services/kinopoiskAPI';
 
 const movieTypes = {
   FILM: 'Фильм',
