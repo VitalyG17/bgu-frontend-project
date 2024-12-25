@@ -96,7 +96,7 @@ export default function Navbar() {
                 variant="h4"
                 to="/"
               >
-                betflix
+                Пират-фильм
               </Typography>
               <Search />
               <IconButton color="inherit" onClick={toggleColorMode}>

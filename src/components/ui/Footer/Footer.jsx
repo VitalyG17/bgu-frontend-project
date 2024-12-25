@@ -15,13 +15,12 @@ export default function Footer() {
       }}
     >
       <Typography variant="body2" color="text.secondary">
-        &copy; {new Date().getFullYear()} &laquo;betflix&raquo; 18+ <br />
-        Данный сайт создан исключительно в обущающих целях. <br />
-        Все права принадлежат правообладателям.
+        &copy; {new Date().getFullYear()} &laquo;Пират-фильм&raquo; <br />
+        Тут какое-то бла бла бла про то, что нам все равно на права. <br />
       </Typography>
 
-      <Typography variant="h4" color="primary.main">
-        betflix
+      <Typography variant="h5" color="primary.main">
+        Пират-фильм
       </Typography>
     </Stack>
   );

@@ -1,10 +1,9 @@
 import { Pagination, Stack } from '@mui/material';
 import React from 'react';
 
-import MovieCard from '../MovieCard/MovieCard';
+import MovieCard from '../MovieCard';
 
 export default function MoviesList({ movies, totalPages, page, setPage }) {
-  console.log(totalPages);
   return (
     <>
       <Stack direction="row" justifyContent="center" flexWrap="wrap">
